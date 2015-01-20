@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>ahil-vhf Demo</title>
+
+  <script src="../webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="ahil-vhf.html">
+
+  <style>
+    @media all and (min-width: 960px) {
+      body{
+        font-size: 18px;
+      }
+    }
+
+    @media all and (max-width: 959px) and (min-width: 600px) {
+      body{
+        font-size: 16px;
+      }
+    }
+
+    @media all and (max-width: 599px) {
+      body{
+        font-size: 12px;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+      ahil-vhf /deep/ .ctrl-buttons {
+        width: auto;
+      }
+    }
+  </style>
+
+</head>
+<body unresolved>
+
+  <p>An `ahil-vhf` looks like this:</p>
+
+  <ahil-vhf style="max-width: 805px;"></ahil-vhf>
+
+</body>
+</html>
