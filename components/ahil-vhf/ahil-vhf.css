@@ -1,0 +1,293 @@
+:host {
+  display: block;
+  color: #be2222;
+  line-height: normal;
+  max-width: 800px;
+}
+
+.p-container {
+  width: 100hw;
+  padding: 10px;
+  background-color: #90c2e3;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.p-screen-container {
+  background-color: black;
+  padding: 10px;
+  -webkit-border-radius: 10px 0px 10px 10px;
+  -moz-border-radius: 10px 0px 10px 10px;
+  border-radius: 10px 0px 10px 10px;
+  width:100%;
+}
+
+.p-screen {
+  color: black;
+  background-color: #D8FFFB;
+  height: 9em;
+}
+
+.p-screen-box {
+  width: 20em;
+  min-width: 20em;
+}
+
+.p-hidden {
+  visibility: hidden;
+}
+
+.p-signals {
+  padding: 5px;
+  color: #90c2e3;
+}
+
+.p-signals > div > a {
+  color: white;
+}
+
+.p-signal {
+}
+
+.p-signal-indicator {
+  width: 50%;
+  height: 20px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background-color: grey;
+}
+
+.p-signal-active {
+  color: #be2222;
+}
+
+.p-tel-container {
+}
+
+.p-tel-channel {
+  text-align: right;
+  font-size: 4em;
+}
+
+.p-tel-display {
+  padding-right: 20px;
+}
+
+.p-tel-indicator {
+  text-align: left;
+  padding: 5px;
+  width: 2em;
+  font-size: 1.5em;
+   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0,  .75);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0,  .75);
+  box-shadow: 0 0 10px rgba(0, 0, 0,  .75);
+}
+
+.p-tel-values > div > header {
+  font-size: 0.8em;
+}
+
+.p-tel-values > div > footer {
+  font-size: 1.5em;
+  text-align: center;
+  width: 1em;
+}
+
+.p-status-display {
+  padding-left: 5px;
+}
+
+.p-status-display > header {
+  font-size: 2.0em;
+}
+
+.p-status-display > a > span {
+  float: right;
+  margin-right: 2em;
+}
+
+.p-select-display {
+  font-size: 1em;
+}
+
+.p-select-display > table > tbody > tr > td:first-child {
+  width: 3em;
+}
+
+.p-notiffication-display {
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.p-select-indicator {
+  text-align: left;
+  padding: 5px;
+  font-size: 1em;
+   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0,  .75);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0,  .75);
+  box-shadow: 0 0 10px rgba(0, 0, 0,  .75);
+}
+
+.p-crossed {
+  text-decoration: line-through;
+}
+
+.p-ctrl-knobs {
+  color: black;
+  max-width: 370px;
+}
+
+.p-ctrl-actions {
+  background-color:black;
+  text-align: center;
+  font-size: 2.2em;
+  color: white;
+  padding: 0.2em;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-right: 5px;
+  width: 20px;
+}
+
+.p-ctrl-actions > font-awesome {
+  text-shadow: 1.5px 1.5px rgba(0, 0, 50, 1.00);
+  line-height: 0;
+}
+
+.p-ctrl-actions > font-awesome:active {
+  border: 0px solid black;
+  -webkit-box-shadow: 0 0 0px rgba(0, 0, 0,  .75);
+  -moz-box-shadow: 0 0 0px rgba(0, 0, 0,  .75);
+  box-shadow: 0 0 0px rgba(0, 0, 0,  .75);
+  text-shadow: 1.5px 1.5px rgba(0, 0, 50,  0.50);
+}
+
+.p-ctrl-commands {
+  max-width: 370px;
+  padding-left: 5px;
+}
+
+.p-ctrl-commands > .p-button {
+  margin: 2px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px; /*add some padding to the inside of the button*/
+  border: 1px solid grey; /*required or the default border for the browser will appear*/
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0,  .75);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0,  .75);
+  box-shadow: 0 0 10px rgba(0, 0, 0,  .75);
+
+}
+
+.p-onoff-button {
+  background-color: black;
+  color: white;
+  width: 60px;
+  height: 3.0em;
+  padding: 2px;
+  margin: 5px;
+   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border:1px solid grey; /*required or the default border for the browser will appear*/
+}
+
+.p-dial-buttons {
+  font-size: 0.8em;
+  max-width: 250px;
+  min-width: 180px
+}
+
+.p-dial-button {
+  background-color: black;
+  color: white;
+  width: 28%;
+  padding: 2px;
+  margin: 1%;
+   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border:1px solid grey; /*required or the default border for the browser will appear*/
+}
+
+.p-onoff-button > span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.p-dial-button > div > header {
+  font-size: 0.8em;
+  text-align: left;
+  color: grey;
+}
+
+.p-dial-button > .p-number {
+  font-size: 2em;
+  text-align: right;
+  vertical-align: text-bottom;
+}
+
+.p-distress-button {
+  background-color: #f09497;
+  color: black;
+  width: 100px;
+  height: 3.0em;
+  padding: 2px;
+  margin: 5px;
+   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border:1px solid grey; /*required or the default border for the browser will appear*/
+  display: table;
+  margin: 0 auto;
+}
+
+.p-distress-button > span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.p-distress-wrapper {
+  width: 100%;
+}
+
+.p-button {
+  text-align: center;
+  cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+
+.p-button:active {
+  border: 1px solid black;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0,  .75);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0,  .75);
+  box-shadow: 0 0 5px rgba(0, 0, 0,  .75);
+}
+
+.p-knob-wrapper {
+  width: 80px;
+  height: 60px;
+}
+
+.p-knob-wrapper > a {
+  position:relative;
+  left: -10px;
+}
+
+.p-knob {
+  position: relative;
+  top: -20px;
+  left: -20px;
+}

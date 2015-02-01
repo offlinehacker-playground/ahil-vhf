@@ -1,0 +1,21 @@
+{
+  "name": "ahil-vhf",
+  "version": "0.1.0",
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "ahil-vhf.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.0",
+    "polymer-fontawesome": "~1.0.0-beta.2",
+    "underscore": "~1.7.0",
+    "buzz": "~1.1.7",
+    "core-media-query": "Polymer/core-media-query#~0.5.3",
+    "webcomponentsjs": "~0.5.4"
+  },
+  "devDependencies": {
+    "web-component-tester": "~2.0.1"
+  }
+}

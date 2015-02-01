@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>ahil-vhf Demo</title>
+
+  <script src="../webcomponentsjs/webcomponents.js"></script>
+
+  <link rel="import" href="../core-media-query/core-media-query.html">
+  <link rel="import" href="ahil-vhf.html">
+
+  <style>
+
+    @media all and (min-width: 960px) {
+      body{
+        font-size: 16px;
+      }
+    }
+
+    @media all and (max-width: 959px) and (min-width: 400px) {
+      body{
+        font-size: 14px;
+      }
+    }
+
+    @media all and (max-width: 399px) {
+      body{
+        font-size: 12px;
+      }
+    }
+
+  </style>
+
+</head>
+<body unresolved>
+
+  <p>An `ahil-vhf` looks like this:</p>
+
+  <template is="auto-binding">
+    <core-media-query query="max-width: 640px" queryMatches="{{phoneScreen}}"></core-media-query>
+    <ahil-vhf style="max-width: 805px;" horizontal?={{!phoneScreen}} vertical?={{phoneScreen}}></ahil-vhf>
+  </template>
+
+</body>
+</html>
