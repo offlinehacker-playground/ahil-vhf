@@ -18,11 +18,11 @@
     "web-component-tester": "~2.0.1"
   },
   "homepage": "https://github.com/offlinehacker-playground/ahil-vhf",
-  "_release": "6d2f21920c",
+  "_release": "1d844a5e82",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "6d2f21920c7ebb77f76f51d395e8e77b78180b68"
+    "commit": "1d844a5e82ff10bb8a8beeef9ca92c4fa0140ecc"
   },
   "_source": "git://github.com/offlinehacker-playground/ahil-vhf.git",
   "_target": "master",
