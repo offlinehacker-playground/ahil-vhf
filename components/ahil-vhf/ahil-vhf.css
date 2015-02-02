@@ -29,9 +29,17 @@
   height: 9em;
 }
 
+.p-screen > div {
+  height: 100%;
+}
+
 .p-screen-box {
   width: 20em;
   min-width: 20em;
+}
+
+.p-screen-element {
+  height: 100%
 }
 
 .p-hidden {
@@ -203,7 +211,7 @@
 .p-dial-buttons {
   font-size: 0.8em;
   max-width: 250px;
-  min-width: 180px
+  min-width: 180px;
 }
 
 .p-dial-button {
@@ -267,6 +275,7 @@
   -ms-user-select: none; /* IE10+ */
   -o-user-select: none;
   user-select: none;
+  z-index: 2;
 }
 
 .p-button:active {
@@ -278,7 +287,7 @@
 
 .p-knob-wrapper {
   width: 80px;
-  height: 60px;
+  height: 70px;
 }
 
 .p-knob-wrapper > a {

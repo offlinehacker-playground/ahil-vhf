@@ -28,7 +28,7 @@ Element providing emulator for vhf stations.
             <div class="{{ {'p-hidden': !on} | tokenList}}">
 
               <template if="{{screen == 'tel'}}" >
-                <div horizontal layout class="p-tel-container">
+                <div horizontal layout class="p-tel-container p-screen-element">
                   <div flex vertical layout class="p-tel-display">
                     <a class="p-tel-channel">{{ channel }}</a>
                     <div flex horizontal around-justified layout  class="p-tel-values" style="width: 100%">
@@ -46,7 +46,7 @@ Element providing emulator for vhf stations.
                       </div>
                     </div>
                   </div>
-                  <div class="p-tel-indicator" vertical layout>
+                  <div class="p-tel-indicator" vertical layout justified>
                     <a>{{ power == "1w"? "1W" : "25W" }}</a>
                     <a>{{ inter? "INT" : "US" }}</a>
                     <font-awesome icon="{{ mute? 'volume-off': 'volume-up'}}"></font-awesome>
@@ -56,7 +56,7 @@ Element providing emulator for vhf stations.
               </template>
 
               <template if="{{screen == 'dsc'}}">
-                <div horizontal layout class="p-status-container">
+                <div horizontal layout class="p-status-container p-screen-element">
                   <div flex vertical layout class="p-status-display">
                     <header>DSC status</header>
                     <br/>
@@ -64,18 +64,18 @@ Element providing emulator for vhf stations.
                     <a>POS: <span>{{position}}</span></a>
                     <a>At UTC: <span>{{time}}</span></a>
                   </div>
-                  <div class="p-tel-indicator" vertical layout>
+                  <div class="p-tel-indicator" vertical layout justified>
                   </div>
                 </div>
               </template>
 
               <template if="{{screen == 'call-select'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Select type of call:</header>
                     <br/>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <template if="{{screenPage == 1}}">
                       <a><font-awesome icon="circle"></font-awesome> SHORE</a>
                       <a><font-awesome icon="circle"></font-awesome> SHIP</a>
@@ -93,7 +93,7 @@ Element providing emulator for vhf stations.
               </template>
 
               <template if="{{screen == 'call'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Key in the {{callRegion}}<br/>station MMSI<br/> number:</header>
                     <br/>
@@ -108,16 +108,17 @@ Element providing emulator for vhf stations.
                       </tr>
                     </table>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <a><font-awesome icon="circle"></font-awesome> ACCEPT</a>
                     <a><font-awesome icon="circle"></font-awesome> DIRECTORY</a>
                     <a><font-awesome icon="circle"></font-awesome><font-awesome icon="mail-reply"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
                   </div>
                 </div>
               </template>
 
               <template if="{{screen == 'call-channel'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Key in the working channel</header>
                     <br/>
@@ -136,15 +137,17 @@ Element providing emulator for vhf stations.
                       </tr>
                     </table>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <a><font-awesome icon="circle"></font-awesome> ACCEPT</a>
                     <a><font-awesome icon="circle"></font-awesome><font-awesome icon="mail-reply"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
                   </div>
                 </div>
               </template>
 
               <template if="{{screen == 'call-group'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Choose a working channel</header>
                     <br/>
@@ -163,15 +166,17 @@ Element providing emulator for vhf stations.
                       </tr>
                     </table>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <a><font-awesome icon="circle"></font-awesome> ACCEPT</a>
                     <a><font-awesome icon="circle"></font-awesome><font-awesome icon="mail-reply"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
                   </div>
                 </div>
               </template>
 
               <template if="{{screen == 'call-group-accept'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Select send<br/>to transmit</header>
                     <br/>
@@ -190,15 +195,17 @@ Element providing emulator for vhf stations.
                       </tr>
                     </table>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <a><font-awesome icon="circle"></font-awesome> SEND</a>
                     <a><font-awesome icon="circle"></font-awesome><font-awesome icon="close"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
                   </div>
                 </div>
               </template>
 
               <template if="{{screen == 'call-accept'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Select send<br/>to transmit</header>
                     <br/>
@@ -217,15 +224,17 @@ Element providing emulator for vhf stations.
                       </tr>
                     </table>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <a><font-awesome icon="circle"></font-awesome> SEND</a>
                     <a><font-awesome icon="circle"></font-awesome><font-awesome icon="close"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
                   </div>
                 </div>
               </template>
 
               <template if="{{screen == 'distress'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>
                       <template if="{{distressTimeout < 0}}">
@@ -255,16 +264,18 @@ Element providing emulator for vhf stations.
                     </table>
                   </div>
                   <template if="{{distressTimeout < 0}}">
-                    <div class="p-select-indicator" vertical layout>
+                    <div class="p-select-indicator" vertical layout justified>
                       <a><font-awesome icon="circle"></font-awesome> SEND</a>
                       <a><font-awesome icon="circle"></font-awesome><font-awesome icon="close"></font-awesome></a>
+                      <a><font-awesome icon="none"></font-awesome></a>
+                      <a><font-awesome icon="none"></font-awesome></a>
                     </div>
                   </template>
                 </div>
               </template>
 
               <template if="{{screen == 'distress-send'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>
                       Waiting for DISTRESS Acknowledgement
@@ -278,8 +289,11 @@ Element providing emulator for vhf stations.
                     </table>
                     Retransmit distress call every 4 minutes
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <a><font-awesome icon="circle"></font-awesome><font-awesome icon="close"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
                   </div>
                 </div>
               </template>
@@ -289,14 +303,17 @@ Element providing emulator for vhf stations.
                   <div flex vertical layout class="p-notiffication-display">
                     <a>{{ notifficationMessage }}</a>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <a><font-awesome icon="circle"></font-awesome><font-awesome icon="close"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
                   </div>
                 </div>
               </template>
 
               <template if="{{screen == 'addressbook'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
 
                   <template if="{{screenPage == 1}}">
                     <div flex vertical layout class="p-select-display">
@@ -325,7 +342,7 @@ Element providing emulator for vhf stations.
                         </template>
                       </template>
                     </div>
-                    <div class="p-select-indicator" vertical layout>
+                    <div class="p-select-indicator" vertical layout justified>
                       <a><font-awesome icon="circle"></font-awesome> ACCEPT</a>
                       <a><font-awesome icon="circle"></font-awesome>
                         <font-awesome icon="angle-up"></font-awesome>
@@ -343,7 +360,7 @@ Element providing emulator for vhf stations.
                         Select ADD to</br>make a new call
                       </header>
                     </div>
-                    <div class="p-select-indicator" vertical layout>
+                    <div class="p-select-indicator" vertical layout justified>
                       <a><font-awesome icon="circle"></font-awesome>
                         ADD
                       </a>
@@ -363,7 +380,7 @@ Element providing emulator for vhf stations.
               </template>
 
               <template if="{{screen == 'call-addressbook-accept'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Select send<br/>to transmit</header>
                     <br/>
@@ -382,19 +399,21 @@ Element providing emulator for vhf stations.
                       </tr>
                     </table>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <a><font-awesome icon="circle"></font-awesome> SEND</a>
                     <a><font-awesome icon="circle"></font-awesome><font-awesome icon="close"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
                   </div>
                 </div>
               </template>
 
               <template if="{{screen == 'distress-select'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Select</br>nature of</br>distress</header>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
 
                     <template if="{{screenPage == 1}}">
                       <a><font-awesome icon="circle"></font-awesome> COLLISION</a>
@@ -426,11 +445,11 @@ Element providing emulator for vhf stations.
               </template>
 
               <template if="{{screen == 'extended-select'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Select type of</br>exetended call</header>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
 
                     <template if="{{screenPage == 1}}">
                       <a><font-awesome icon="circle"></font-awesome> INDIVIDUAL</a>
@@ -450,15 +469,16 @@ Element providing emulator for vhf stations.
               </template>
 
               <template if="{{screen == 'rxlog'}}">
-                <div horizontal layout>
+                <div horizontal layout class="p-screen-element">
                   <div flex vertical layout class="p-select-display">
                     <header>Select type of</br>message to view</header>
                     <br/>
                   </div>
-                  <div class="p-select-indicator" vertical layout>
+                  <div class="p-select-indicator" vertical layout justified>
                     <a><font-awesome icon="circle"></font-awesome> CALLS</a>
                     <a><font-awesome icon="circle"></font-awesome> ALARM CALLS</a>
                     <a><font-awesome icon="circle"></font-awesome><font-awesome icon="close"></font-awesome></a>
+                    <a><font-awesome icon="none"></font-awesome></a>
                   </div>
                 </div>
               </template>
@@ -506,11 +526,11 @@ Element providing emulator for vhf stations.
       </div>
       <div class="p-ctrl-knobs" vertical?={{!vertical}} horizontal?={{!horizontal}} justified layout wrap>
         <div class="p-knob-wrapper" horizontal layout>
-          <webaudio-knob id="volume" class="p-knob" src="Gorethi2.png" sprites="19" min="0" max="100" width="100" height="100" value="{{volume}}"></webaudio-knob>
+          <webaudio-knob id="volume" class="p-knob" src="Gorethi2.png" sprites="19" min="0" max="100" width="120" height="120" value="{{volume}}"></webaudio-knob>
           <a>Vol</a>
         </div>
         <div class="p-knob-wrapper" horizontal layout>
-          <webaudio-knob id="sq" class="p-knob" src="Gorethi2.png" sprites="19" min="0" max="100" diameter="120" width="100" height="100" value="{{sq}}"></webaudio-knob>
+          <webaudio-knob id="sq" class="p-knob" src="Gorethi2.png" sprites="19" min="0" max="100" diameter="120" width="120" height="120" value="{{sq}}"></webaudio-knob>
           <a>Sq</a>
         </div>
         <div class="p-onoff-button p-button" on-click={{clickOnOff}}>ON/</br>OFF</div>
@@ -743,7 +763,9 @@ Element providing emulator for vhf stations.
           that.audio = new SeamlessLoop();
           that.audio.addUri('data:audio/wav;base64,' + btoa(wav), 10000, "noise");
           that.audio.callback(function() {
-            that.audio.volume(that.volume * 1/100);
+            try {
+              that.audio.volume(that.volume * 1/100);
+            } catch(e) {}
             that.playing = false;
             that.setMute();
           });

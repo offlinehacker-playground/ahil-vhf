@@ -1,0 +1,52 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ahil-vhf-basic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <script src="../../webcomponentsjs/webcomponents.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+
+  <link rel="import" href="../ahil-vhf.html">
+
+</head>
+<body>
+
+  <ahil-vhf id="vhf"></ahil-vhf>
+
+  <script>
+
+    var vhf = document.querySelector('#vhf');
+
+    var delay = 200;
+    suite('basic', function() {
+      test('verify turn on', function(done) {
+        var el = vhf.shadowRoot.querySelector('.p-screen > div');
+        assert(el.classList.contains('p-hidden'));
+
+        vhf.on = true;
+        Polymer.flush();
+        setTimeout(function() {
+          assert(!el.classList.contains('p-hidden'));
+          done();
+        }, delay);
+      });
+
+      test('enter number', function(done) {
+        var el = vhf.shadowRoot.querySelectorAll('.p-dial-button');
+        el[0].click();
+        Polymer.flush();
+        el[1].click();
+        Polymer.flush();
+
+        var channel = vhf.shadowRoot.querySelector('.p-tel-channel');
+        setTimeout(function() {
+          assert.equal(channel.textContent, '12');
+          done();
+        }, delay);
+      });
+    });
+  </script>
+
+</body>
+</html>

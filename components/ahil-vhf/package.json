@@ -1,0 +1,30 @@
+{
+  "name": "ahil-vhf",
+  "version": "1.0.0",
+  "description": "ahil-vhf ================",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/offlinehacker-playground/ahil-vhf.git"
+  },
+  "author": "Jaka Hudoklin <jakahudoklin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/offlinehacker-playground/ahil-vhf/issues"
+  },
+  "homepage": "https://github.com/offlinehacker-playground/ahil-vhf",
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-util": "^3.0.3",
+    "gulp-vulcanize": "^5.0.0",
+    "vulcanize": "^0.7.6",
+    "web-component-tester": "https://github.com/Polymer/web-component-tester/archive/v2.1.3.tar.gz"
+  }
+}
